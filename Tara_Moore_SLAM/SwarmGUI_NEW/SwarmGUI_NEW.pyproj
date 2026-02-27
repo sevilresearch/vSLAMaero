@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{b98fd946-103d-4e49-8eb7-25b342df6b15}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>AirSim\EntropyRewrite\summarize_run.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>MSBuild|.venv|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AirSim\AirSimWorking\CustomPathNavigationSingleUAV.py" />
+    <Compile Include="AirSim\AirSimWorking\EntropyCalculation.py" />
+    <Compile Include="AirSim\AirSimWorking\EntropyFormation.py" />
+    <Compile Include="AirSim\AirSimWorking\Plotter.py" />
+    <Compile Include="AirSim\AirSimWorking\Plotter_NotAnimated.py" />
+    <Compile Include="AirSim\EntropyRewrite\Calculations.py" />
+    <Compile Include="AirSim\EntropyRewrite\CentralControl.py" />
+    <Compile Include="AirSim\EntropyRewrite\check_csv.py" />
+    <Compile Include="AirSim\EntropyRewrite\gui.py" />
+    <Compile Include="AirSim\EntropyRewrite\jason_python_lib.py" />
+    <Compile Include="AirSim\EntropyRewrite\main.py" />
+    <Compile Include="AirSim\EntropyRewrite\Management.py" />
+    <Compile Include="AirSim\EntropyRewrite\Strategies\AirSimStrategy.py" />
+    <Compile Include="AirSim\EntropyRewrite\main_quick_test.py" />
+    <Compile Include="AirSim\EntropyRewrite\Strategies\TelloStrategy.py" />
+    <Compile Include="AirSim\EntropyRewrite\Strategy.py" />
+    <Compile Include="AirSim\EntropyRewrite\summarize_run.py" />
+    <Compile Include="AirSim\EntropyRewrite\UAV.py" />
+    <Compile Include="Python\CustomPathNavigationSingleUAV.py" />
+    <Compile Include="Python\DistancePlotter.py" />
+    <Compile Include="Python\EntropyCalculation.py" />
+    <Compile Include="Python\EntropyFormation.py" />
+    <Compile Include="Python\Plotter.py" />
+    <Compile Include="Python\Plotter_NotAnimated.py" />
+    <Compile Include="Python\SixUAVTesting\EntropyCalculationSixUAVs.py" />
+    <Compile Include="Python\SixUAVTesting\EntropyFormationSixUAVs.py" />
+    <Compile Include="Python\SixUAVTesting\PlotterSixUAVs.py" />
+    <Compile Include="Python\test.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AirSim\EntropyRewrite\requirements.txt" />
+    <Content Include="AirSim\EntropyRewrite\UAV Program Help.png" />
+    <Content Include="AirSim\Papers\uav-uml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AirSim\" />
+    <Folder Include="AirSim\AirSimWorking" />
+    <Folder Include="AirSim\EntropyRewrite" />
+    <Folder Include="AirSim\EntropyRewrite\Strategies" />
+    <Folder Include="AirSim\Papers" />
+    <Folder Include="Python" />
+    <Folder Include="Python\SixUAVTesting" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include=".venv\">
+      <Id>.venv</Id>
+      <Version>3.11</Version>
+      <Description>.venv (Python 3.11 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
